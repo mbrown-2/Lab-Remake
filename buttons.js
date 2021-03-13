@@ -1,3 +1,5 @@
+const labelCustom = "Custom group";
+
 // Console.log
 document.getElementById("console.log").addEventListener("click", function() {
     console.log("Hey check me out! I'm a logged message!");
@@ -59,6 +61,21 @@ document.getElementById("console.group").addEventListener("click", function() {
     console.info("Simply R.C.E. - Red Corporate Entity.");
     console.info("The actual fish-out-of-water.");
     console.groupEnd(label);
+});
+
+// groupCustomStart
+document.getElementById("groupCustomStart").addEventListener("click", function() {
+    console.group(labelCustom);
+});
+
+// groupCustomLog
+document.getElementById("groupCustomLog").addEventListener("click", function() {
+    console.info("Log");
+});
+
+// groupCustomEnd
+document.getElementById("groupCustomEnd").addEventListener("click", function() {
+    console.groupEnd(labelCustom);
 });
 
 // Console.time
