@@ -38,3 +38,46 @@ document.getElementById("console.table").addEventListener("click", function() {
         }
     ]);
 });
+
+// Console.dir
+document.getElementById("console.dir").addEventListener("click", function() {
+    console.dir(document.head);
+});
+
+// Console.dirxml
+document.getElementById("console.dirxml").addEventListener("click", function() {
+    console.dir(document);
+});
+
+// Console.group
+document.getElementById("console.group").addEventListener("click", function() {
+    const label = "Alternative descriptions for characters in Spongebob:";
+    console.group(label);
+    console.info("A yellow brick with all the positivity I wish I still had.");
+    console.info("A giant, pink boomerang. (Atlantis SquarePantis circa. 2007).");
+    console.info("The adult version of an average elementary musical performance.");
+    console.info("Simply R.C.E. - Red Corporate Entity.");
+    console.info("The actual fish-out-of-water.");
+    console.groupEnd(label);
+});
+
+// Console.time
+document.getElementById("console.time").addEventListener("click", function() {
+    console.time();
+    console.log("Timer started!");
+});
+
+// Console.timeEnd
+document.getElementById("console.timeEnd").addEventListener("click", function() {
+    console.timeEnd();
+    console.log("Timer ended!");
+});
+
+// Console.trace
+document.getElementById("console.trace").addEventListener("click", function() {
+    const first = () => { second(); };
+    const second = () => { third(); };
+    const third = () => { fourth(); };
+    const fourth = () => { console.trace(); };
+    first();
+});
