@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="./styles.css">
   </head>
   
   <body>
     <main>
-    </main>
-  </body>
+      <h1>Simple Calculator</h1>
+      <div id="calculations">
+        <input type="number" id="num1"></input>
+        <select id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="/">/</option>
+          <option value="*">*</option>
+        </select>
+        <input type="number" id="num2"></input>
 
+        <label id="equals">=</label>
+        <span id="result">__________</span>
+    </div>
+
+    <div id="user-input">
+      <button type="button" id="calculate">Calculate!</button>
+    </div>
+
+    <div id="error-tracking">
+    </div>
+    </main>
+
+    <script src="./source.js" type="module"></script>
+  </body>
 </html>
