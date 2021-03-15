@@ -2,11 +2,23 @@
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+    <script>
+      window.TrackJS && TrackJS.install({ 
+      token: "1e14ce772c3e4b27aba038ee494accb7"
+      // for more configuration options, see https://docs.trackjs.com
+    });
+  </script>
   </head>
   
   <body>
     <main>
       <h1>Simple Calculator</h1>
+
+      <p>Addition, subtraction, and division will work as expected. When multiplying, the JS will enter a try/catch and purposefully catch an error.</p>
+
+      <p>If attempting to calculate with at least 1 input box left empty, the calculator will throw an error.</p>
+
       <div id="calculations">
         <input type="number" id="num1"></input>
         <select id="operator">
@@ -47,9 +59,17 @@
       <button type="button" id="groupCustomLog">Custom Console.group() Log</button>
       <button type="button" id="groupCustomEnd">Custom Console.group() End</button>
     </div>
+
+    <hr>
+
+    <div id="custom-errors">
+      <button type="button" id="throwCustomButton">Throw Custom Error</button>
+      <button type="button" id="globalError">Throw Global Error</button>
+    </div>
+
     </main>
 
-    <script src="./source.js" type="module"></script>
+    <script src="./errors.js" type="module"></script>
     <script src="./buttons.js" type="module"></script>
   </body>
 </html>
